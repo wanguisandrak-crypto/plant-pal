@@ -38,3 +38,8 @@ padding: 10px 20px;
 border: none;
 border-radius: 4px;
 }
+input[type=text], input[type=number] {
+padding: 8px;
+border: 1pc;
+border-radius: 4px;
+}
