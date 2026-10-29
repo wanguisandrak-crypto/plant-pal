@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plant Pal | My Plant Collection</title>
+  <title>plantpal - find your perfect plantcompanion</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.google.com/">
 </head>
 <body>
+
+
+  <!-- navigation Header -->
   <header class="navbar">
-    <a href="index.html" class="logo">
-      <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M20 4c-8 0-14 3.5-14 10a6 6 0 0 0 6 6c6.5 0 8-8 8-16Z"/>
-        <path d="M4 21c3-5 7-8 12-11"/>
-      </svg>
-      <span>Plant Pal</span>
+    <a href="index.html"  class="logo">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="current color" stroke-width="2" ><path d="m11 20A7 0 0 1 9.8 6.1C15.5 17 4.4 19 2c1 2 2 4.1 2 9 0 5-4 9-10 9z"/></svg>
+<span> 🌱plant pal</span>
 
     </a>
     <nav>
@@ -24,38 +25,23 @@
     </nav>
 
  </header>
-<main class="home-page">
-  <section class="home-intro" aria-labelledby="home-title">
-    <p class="home-eyebrow">A CALMER WAY TO CARE FOR YOUR PLANTS</p>
-    <h1 id="home-title">Your plants, all in one place.</h1>
-    <p>Keep track of what you grow and the care each plant needs.</p>
-  </section>
-
-  <section id="dashboard" class="dashboard" aria-labelledby="collection-title">
-    <div class="collection-heading">
-      <div>
-        <h2 id="collection-title">My plant collection</h2>
-        <p>Your personal space for keeping tabs on every leaf.</p>
-      </div>
-      <button id="addplant-btn" class="primary-button" type="button">Add a plant</button>
+<main>
+<section id="dashboard">
+  <h2>My plant collection</h2>
+  <button id="addplant-btn" type="button">Add new plant</button>
+  <div id="plant-container" class="plant-grid"></div>
+  <section id="plantform-modal" class="modal hidden" aria-label="Add a plant">
+    <div class="modal-content">
+      <button type="button" id="close-btn" class="close-btn" aria-label="Close">&times;</button>
+      <form id="plantform">
+        <input type="text" id="plant-name" placeholder="Plant name" aria-label="Plant name" required>
+        <input type="text" id="plant-species" placeholder="Plant species" aria-label="Plant species" required>
+        <input type="text" id="plant-location" placeholder="Location" aria-label="Location" required>
+        <input type="number" id="water-frequency" placeholder="Watering frequency (days)" aria-label="Watering frequency in days" required>
+        <button type="submit" id="addplant">Add plant</button>
+      </form>
     </div>
-    <div id="plant-container" class="plant-grid" aria-live="polite"></div>
-    <p id="empty-state" class="empty-state">Your collection is ready to grow. Add your first plant to get started.</p>
-
-    
-    <section id="plantform-modal" class="modal hidden" aria-label="Add a plant">
-      <div class="modal-content">
-        <button type="button" id="close-btn" class="close-btn" aria-label="Close">&times;</button>
-        <h2>Add a plant</h2>
-        <form id="plantform">
-          <input type="text" id="plant-name" placeholder="Plant name" aria-label="Plant name" required>
-          <input type="text" id="plant-species" placeholder="Plant species" aria-label="Plant species" required>
-          <input type="text" id="plant-location" placeholder="Location" aria-label="Location" required>
-          <input type="number" id="water-frequency" placeholder="Watering frequency (days)" aria-label="Watering frequency in days" min="1" required>
-          <button type="submit" id="addplant" class="primary-button">Add plant</button>
-        </form>
-      </div>
-    </section>
+  </section>
   </section>
 </main>
 
