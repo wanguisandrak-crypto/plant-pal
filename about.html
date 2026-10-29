@@ -3,24 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About us</title>
+  <title>About Plant Pal</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+  <header class="navbar">
+    <a class="logo" href="index.html">
+      <svg aria-hidden="true" focusable="false" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 4c-8 0-14 3.5-14 10a6 6 0 0 0 6 6c6.5 0 8-8 8-16Z"/>
+        <path d="M4 21c3-5 7-8 12-11"/>
+      </svg>
+      <span>Plant Pal</span>
+    </a>
     <nav>
-      <a href="index.html">home page</a>
-      <a href="care-guides.html">care-guides</a>
-      <a href="about.html">about</a>
+      <a href="index.html">Home</a>
+      <a href="care-guides.html">Care guides</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a class="github-link" href="https://github.com/wanguisandrak-crypto/plant-pal" target="_blank" rel="noopener noreferrer">GitHub</a>
     </nav>
-
   </header>
-  <main>
-    <h1>plant pal mission</h1>
-    <p>plant pal is a supportive community space where plant lovers of all levels connect ,share knowledge and help plants thrive</p>
+  <main class="about-page">
+    <section class="about-hero" aria-labelledby="about-title">
+      <p class="about-eyebrow">GROW WITH CONFIDENCE</p>
+      <h1 id="about-title">A little more green, a little less guesswork.</h1>
+      <p class="about-intro">Plant Pal helps make caring for houseplants feel simple and rewarding. Keep your plants organized, learn the basics, and build confidence one leaf at a time.</p>
+      <a class="about-cta" href="index.html">Explore your plant collection</a>
+    </section>
 
+    <section class="about-details" aria-label="About Plant Pal">
+      <article class="about-card">
+        <h2>Our purpose</h2>
+        <p>Every plant has its own needs, and remembering them can be a challenge. Plant Pal brings useful care details together so you can spend less time guessing and more time enjoying the greenery around you.</p>
+      </article>
+      <article class="about-card">
+        <h2>How Plant Pal helps</h2>
+        <p>Create a simple record for each plant with its name, species, location, and watering frequency. Use the care guides as a starting point for learning how different plants thrive.</p>
+      </article>
+      <article class="about-card">
+        <h2>Made for every grower</h2>
+        <p>Whether you are caring for your first plant or adding to a growing collection, Plant Pal is designed to make the everyday routine approachable and easy to follow.</p>
+      </article>
+    </section>
   </main>
-
-
-  
 </body>
 </html>

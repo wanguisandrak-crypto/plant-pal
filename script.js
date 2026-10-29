@@ -29,6 +29,7 @@ form.addEventListener("submit", (e) => {
 		plantcard.appendChild(detail);
 	});
 	plantContainer.appendChild(plantcard);
+	document.getElementById("empty-state").remove();
 	form.reset();
 	modal.classList.add("hidden");
 });
