@@ -1,16 +1,21 @@
-const addbutton = document.getElementById("addplant-btn");
-const modal = document.getElementById("Plantformmodal");
-addbutton.addEventListener("click", () => {
-	modal.style.display = "block";
-});
+const addButton = document.getElementById("addplant-btn");
+const modal = document.getElementById("plantform-modal");
 const closeButton = document.getElementById("close-btn");
-closeButton.addEventListener("click", () => {
-	modal.style.display = "none";
-});
 const form = document.getElementById("plantform");
+const plantContainer = document.getElementById("plant-container");
+
+addButton.addEventListener("click", () => {
+	modal.classList.remove("hidden");
+});
+
+closeButton.addEventListener("click", () => {
+	modal.classList.add("hidden");
+});
+
 form.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const plantcard = document.createElement("div");
+	plantcard.className = "plant-card";
 	const heading = document.createElement("h3");
 	heading.textContent = document.getElementById("plant-name").value;
 	plantcard.appendChild(heading);
@@ -23,7 +28,7 @@ form.addEventListener("submit", (e) => {
 		detail.textContent = value;
 		plantcard.appendChild(detail);
 	});
-	document.getElementById("plant-container").appendChild(plantcard)
+	plantContainer.appendChild(plantcard);
 	form.reset();
-	modal.style.display = "block";
+	modal.classList.add("hidden");
 });
