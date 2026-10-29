@@ -12,8 +12,9 @@ header{
 }
 .navbar{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center ;
+  position: relative;
 
 }
 
@@ -25,11 +26,26 @@ header{
 
 }
 
-.nav a {
+.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar .logo {
+  position: absolute;
+  left: 20px;
+}
+
+.navbar .github-link {
+  position: absolute;
+  right: 20px;
+}
+
+.navbar nav a {
   text-decoration: none;
-  color: #fff;
-  margin-left: 70px;
-  margin-right: 70px;
+  color: #333;
 }
 main{
   padding: 20px;
